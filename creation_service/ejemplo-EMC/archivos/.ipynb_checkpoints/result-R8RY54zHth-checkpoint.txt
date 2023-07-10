@@ -1,0 +1,1 @@
+{'alpha': 0.05, 'value': ['gfjjghkf', 'gfjjghkf', 'gfjjghkf', 'gfjjghkf', 'gfjjghkf', 'gfjjghkf']}

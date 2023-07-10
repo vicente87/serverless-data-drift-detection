@@ -1,0 +1,29 @@
+functions:
+  oscar:
+    - oscar-cluster1:
+        name: drs-service-1
+        memory: 2Gi
+        cpu: '2'
+        image: ghcr.io/grycap/drs-api
+        script: script.sh
+        log_level: INFO
+        input:
+          - storage_provider: minio.minio1
+            path: images/input
+        output:
+          - storage_provider: minio.default
+            path: drs/output
+storage_providers:
+  minio:
+    minio1:
+      endpoint: 'https://minio.frosty-grothendieck5.im.grycap.net'
+      region: us-east-1
+      access_key: minio
+      secret_key: minio123
+      verify: false
+    rasp:
+      endpoint: 'https://minio.graspi.im.grycap.net'
+      region: us-east-1
+      access_key: minio
+      secret_key: minio-aisprint-2021
+      verify: false
